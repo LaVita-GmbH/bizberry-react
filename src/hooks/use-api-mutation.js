@@ -3,13 +3,13 @@ import { useMutation } from "react-query"
 
 const useAPIMutation = (method, url, params, queryOptions) => {
     const mutate = () => {
-        if (method === post) {
+        if (method === "post") {
             SDK.post(url, body, params)
         }
-        if (method === put) {
+        if (method === "put") {
             SDK.put(url, body, params)
         }
-        if (method === patch) {
+        if (method === "patch") {
             SDK.patch(url, body, params)
         }
         return useMutation(mutate, ...queryOptions)
