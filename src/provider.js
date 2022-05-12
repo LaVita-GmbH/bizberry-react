@@ -15,4 +15,4 @@ const BizberryProvider = ({ children }) => {
     return <QueryClientProvider client={queryClient}>{children}</QueryClientProvider>
 }
 
-export { BizberryProvider }
+export default BizberryProvider

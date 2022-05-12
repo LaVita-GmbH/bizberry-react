@@ -1,4 +1,4 @@
-import { BizberryProvider } from "./provider"
+import BizberryProvider from "./provider"
 import { useAPI } from "./hooks/use-api"
 import { useAPIMutation } from "./hooks/use-api-mutation"
 import { useLogin } from "./hooks/use-login"
