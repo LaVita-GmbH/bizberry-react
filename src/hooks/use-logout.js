@@ -6,8 +6,8 @@ import { useMutation } from "react-query"
  * @param {API} client 
  * @returns 
  */
-const useLogin = (client) => {
-    return useMutation(async (values) => await client.login(values))
+const useLogout = (client) => {
+    return useMutation(async () => await client.logout())
 }
 
-export { useLogin }
+export { useLogout }
