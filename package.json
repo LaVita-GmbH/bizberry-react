@@ -21,11 +21,11 @@
   ],
   "devDependencies": {
     "@semantic-release/git": "^10.0.1",
-    "@semantic-release/gitlab": "^9.1.2",
+    "@semantic-release/gitlab": "^9.3.0",
     "@semantic-release/npm": "^9.0.1",
     "semantic-release": "^19.0.2"
   },
-  "dependencies": {
+  "peerDependencies": {
     "@lavita-io/bizberry-sdk": "^1.0.1",
     "react-query": "3.39.0"
   }
