@@ -1,0 +1,37 @@
+{
+  "name": "@lavita-io/bizberry-react",
+  "version": "1.7.3",
+  "description": "react for BizBerry",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "semantic-release": "semantic-release",
+    "build": "babel src -d dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@git.lavita.io:lavita-io/front/bizberry-react.git"
+  },
+  "author": "Johannes Hofmockel <johannes.hofmockel@lavita.de>",
+  "license": "AGPL-3.0-or-later",
+  "publishConfig": {
+    "access": "public"
+  },
+  "files": [
+    "*"
+  ],
+  "devDependencies": {
+    "@semantic-release/git": "^10.0.1",
+    "@semantic-release/gitlab": "^9.3.0",
+    "@semantic-release/npm": "^9.0.1",
+    "semantic-release": "^19.0.2",
+    "@babel/cli": "^7.0.0",
+    "@babel/core": "^7.0.0",
+    "@babel/preset-react": "^7.0.0",
+    "@babel/preset-env": "^7.0.0"
+  },
+  "peerDependencies": {
+    "@lavita-io/bizberry-sdk": "^1.7.0",
+    "react-query": "^3.39.0"
+  }
+}
