@@ -1,12 +1,8 @@
-import { API } from "@lavita-io/bizberry-sdk"
+import { useAPI } from "../provider"
 import { useMutation } from "react-query"
 
-/**
- *
- * @param {API} client
- * @returns
- */
-const useLogin = client => {
+const useLogin = () => {
+    const client = useAPI()
     return useMutation(async values => await client.login(values))
 }
 

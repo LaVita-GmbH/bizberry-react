@@ -1,18 +1,18 @@
 import { QueryClient, QueryClientProvider } from "react-query"
+import React, {createContext, useContext} from "react"
 
-import React from "react"
+const APIContext = createContext()
+const StoreContext = createContext()
 
-const BizberryProvider = ({ children }) => {
-    const queryClient = new QueryClient({
-        defaultOptions: {
-            queries: {
-                retry: false,
-                enabled: typeof window !== "undefined",
-            },
-        },
-    })
-
-    return <QueryClientProvider client={queryClient}>{children}</QueryClientProvider>
+export const BizberryProvider = ({ children, queryClient, store, api }) => {
+    return <QueryClientProvider client={queryClient}>
+        <StoreContext.Provider value={store}>
+            <APIContext.Provider value={api}>
+                {children}
+            </APIContext.Provider>
+        </StoreContext.Provider>
+    </QueryClientProvider>
 }
 
-export default BizberryProvider
+export const useAPI = () => useContext(APIContext)
+export const useStore = () => useContext(StoreContext)
