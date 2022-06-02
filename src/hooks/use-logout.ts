@@ -1,4 +1,4 @@
-import { useAPI } from "../provider"
+import { useAPI } from "./use-api"
 import { useMutation } from "react-query"
 
 const useLogout = () => {

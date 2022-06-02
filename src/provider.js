@@ -1,18 +1,14 @@
-import { QueryClient, QueryClientProvider } from "react-query"
-import React, {createContext, useContext} from "react"
+import {APIContext, StoreContext} from "./context"
 
-const APIContext = createContext()
-const StoreContext = createContext()
+import { QueryClientProvider } from "react-query"
+import React from "react"
 
 export const BizberryProvider = ({ children, queryClient, store, api }) => {
-    return <QueryClientProvider client={queryClient}>
-        <StoreContext.Provider value={store}>
-            <APIContext.Provider value={api}>
-                {children}
-            </APIContext.Provider>
-        </StoreContext.Provider>
-    </QueryClientProvider>
+    return (
+        <QueryClientProvider client={queryClient}>
+            <StoreContext.Provider value={store}>
+                <APIContext.Provider value={api}>{children}</APIContext.Provider>
+            </StoreContext.Provider>
+        </QueryClientProvider>
+    )
 }
-
-export const useAPI = () => useContext(APIContext)
-export const useStore = () => useContext(StoreContext)
