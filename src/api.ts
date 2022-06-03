@@ -3,6 +3,7 @@ import { UseMutationOptions, UseQueryOptions, useMutation, useQuery } from "reac
 import { API as SdkAPI } from "@lavita-io/bizberry-sdk"
 
 export class API extends SdkAPI {
+
     queryPrefix: string = "bizberry-react"
 
     get_query_key(method: string, url: string) {
