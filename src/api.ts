@@ -6,6 +6,10 @@ export class API extends SdkAPI {
 
     queryPrefix: string = "bizberry-react"
 
+    constructor({ store, url, tenant }) {
+        super({ store, url, tenant })
+    }
+
     get_query_key(method: string, url: string) {
         return [this.queryPrefix, ...url.split('/').filter(v => v !== "")]
     }
