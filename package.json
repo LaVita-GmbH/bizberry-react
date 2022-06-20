@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "semantic-release": "semantic-release",
-    "build": "babel src -d dist"
+    "build": "babel src --out-dir dist --extensions \".js,.jsx,.ts,.tsx\" --source-maps inline"
   },
   "repository": {
     "type": "git",
@@ -25,17 +25,18 @@
     "@babel/core": "^7.0.0",
     "@babel/preset-env": "^7.0.0",
     "@babel/preset-react": "^7.0.0",
+    "@babel/preset-typescript": "^7.17.12",
     "@semantic-release/git": "^10.0.1",
     "@semantic-release/gitlab": "^9.3.0",
     "@semantic-release/npm": "^9.0.1",
-    "semantic-release": "^19.0.2"
+    "semantic-release": "^19.0.2",
+    "typescript": "^4.7.4"
   },
   "peerDependencies": {
     "@lavita-io/bizberry-sdk": "^1.8.0",
     "react-query": "^3.39.0"
   },
   "dependencies": {
-    "@babel/preset-typescript": "^7.17.12",
     "regenerator-runtime": "^0.13.9"
   }
 }
