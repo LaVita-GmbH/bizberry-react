@@ -1,7 +1,6 @@
-import React, { createContext, useContext } from "react"
-
 import { API } from "./api"
+import { createContext } from "react"
 import { store } from "@lavita-io/bizberry-sdk"
 
-export const APIContext: React.Context<API> = createContext(undefined)
-export const StoreContext: React.Context<store.AbstractStore> = createContext(undefined)
+export const APIContext = createContext<API | undefined>(undefined)
+export const StoreContext = createContext<store.AbstractStore | undefined>(undefined)
