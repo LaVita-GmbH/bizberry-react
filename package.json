@@ -38,6 +38,7 @@
   },
   "dependencies": {
     "@types/react": "^18.0.14",
+    "react-query": "^3.39.1",
     "regenerator-runtime": "^0.13.9"
   }
 }
