@@ -2,6 +2,8 @@ import {APIContext, StoreContext} from "./context"
 import { QueryClient, QueryClientProvider } from "react-query"
 
 import { API } from "./api"
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-ignore
 import { store } from "@lavita-io/bizberry-sdk"
 
 type BizberryProviderOptions = {
