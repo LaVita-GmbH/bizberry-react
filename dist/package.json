@@ -1,6 +1,6 @@
 {
   "name": "@lavita-io/bizberry-react",
-  "version": "1.10.5",
+  "version": "1.10.6",
   "description": "react for BizBerry",
   "main": "src/index.js",
   "scripts": {
