@@ -24,7 +24,6 @@ export class API extends SdkAPI {
         const queryClient = useQueryClient()
         return useMutation(this.get_query_key("POST", url, params), async ( body: object ) => {
             const response = await this.post(url, body, params)
-
             await queryClient.invalidateQueries(this.get_query_key("GET", url))
             return response
         }, queryOptions)
@@ -34,7 +33,6 @@ export class API extends SdkAPI {
         const queryClient = useQueryClient()
         return useMutation(this.get_query_key("PATCH", url, params), async ( body: object ) => {
             const response = await this.patch(url, body, params)
-
             await queryClient.invalidateQueries(this.get_query_key("GET", url).slice(0, -1))
             return response
         }, queryOptions)
@@ -44,7 +42,6 @@ export class API extends SdkAPI {
         const queryClient = useQueryClient()
         return useMutation(this.get_query_key("DELETE", url, params), async () => {
             const response = await this.delete(url, params)
-            
             await queryClient.invalidateQueries(this.get_query_key("GET", url).slice(0, -1))
             return response
         }, queryOptions)
