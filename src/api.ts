@@ -20,7 +20,7 @@ export class API extends SdkAPI {
         }, queryOptions)
     }
 
-    usePost(url: string, params?: object, queryOptions?: UseMutationOptions) {
+    usePost(url: string, params?: object, queryOptions?: Omit<UseMutationOptions<any, unknown, object, unknown>, "mutationKey" | "mutationFn">) {
         const queryClient = useQueryClient()
         return useMutation(this.get_query_key("POST", url, params), async ( body: object ) => {
             const response = await this.post(url, body, params)
@@ -29,7 +29,7 @@ export class API extends SdkAPI {
         }, queryOptions)
     }
 
-    usePatch(url: string, params?: object, queryOptions?: UseMutationOptions) {
+    usePatch(url: string, params?: object, queryOptions?: Omit<UseMutationOptions<any, unknown, object, unknown>, "mutationKey" | "mutationFn">) {
         const queryClient = useQueryClient()
         return useMutation(this.get_query_key("PATCH", url, params), async ( body: object ) => {
             const response = await this.patch(url, body, params)
