@@ -1,6 +1,6 @@
 import { LoginValuesType } from "@lavita-io/bizberry-sdk"
 import { useAPI } from "./use-api"
-import { useMutation } from "react-query"
+import { useMutation } from "@tanstack/react-query"
 
 const useLogin = () => {
     const client = useAPI()

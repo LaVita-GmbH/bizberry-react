@@ -1,5 +1,5 @@
 import { useAPI } from "./use-api"
-import { useMutation } from "react-query"
+import { useMutation } from "@tanstack/react-query"
 
 const useLogout = () => {
     const client = useAPI()
